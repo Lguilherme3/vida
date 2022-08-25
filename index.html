@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vidoca</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+            background-color: #8d7966;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        section#firstbuttons,
+        section#secondbuttons
+        {
+            text-align: center;
+            margin-top: 2%;
+        }
+
+
+        h1 {
+            color: darkred;
+            margin-top: 80px;
+            margin-bottom: 100px;
+            text-align: center;
+
+        }
+
+        div#op1,
+        div#op2, 
+        div#op3  
+        {
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            background-color: #f8f1e9;
+            color: darkred;
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+
+        section#secondbuttons {
+            display: none;
+        }
+        
+        div#op4, 
+        div#op5, 
+        div#op6  
+        {
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            background-color: #d8c8b8;
+            color: darkred;
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 50%; 
+        }
+        div#op1:hover,
+        div#op2:hover,
+        div#op3:hover,
+        div#op4:hover,
+        div#op5:hover, 
+        div#op6:hover {
+            background: lightgray;
+            cursor: pointer;
+        }
+
+        section#lastopt {
+            display: none;
+        }
+    
+        img { 
+            display: block;
+            margin: auto;
+        }
+
+        div#op7 > p {
+            text-align: center;
+            color: darkred;
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+
+        <h1>Adivinhe o botão para prosseguir!</h1>
+
+        <section id="firstbuttons">
+
+            <div id="op1">
+                Aperte aqui!
+            </div>
+            <div id="op2">
+                Não aperte aqui!
+            </div>
+            <div id="op3" onclick="botao()">
+                Vai arriscar?
+            </div>
+        </section>
+
+        <section id="secondbuttons">
+
+            <div id="op4" onclick="botao2()">
+                Você acertou!
+            </div>
+            <div id="op5">
+                Mas e agora?
+            </div>
+            <div id="op6">
+                Qual é o certo?
+            </div>
+
+        </section>
+
+        <section id="lastopt">
+            <div id="op7">
+                <h1>Eu te amo</h1><br>
+                <img src="imagens/eueela.jpeg" alt="eu e ela" width="300px" height="500px">
+                <p>Obrigado por tudo e por tanto!</p>
+            </div>
+        </section>
+    </header>
+    <script>
+        function botao() {
+            if (secondbuttons.style.display == 'block') {
+                secondbuttons.style.display = 'none'
+            } else {
+                secondbuttons.style.display = 'block'
+            }
+        }
+
+        function botao2() {
+            if (lastopt.style.display == 'block') {
+                lastopt.style.display = 'none'
+            } else {
+                lastopt.style.display = 'block'
+                
+            }
+        }
+
+
+
+
+
+       /* var botao = window.document.getElementById('op3')
+        secondSection.addEventListener('click', clicar)
+        var secondSection = window.document.getElementById('secondbuttons')
+        secondSection.addEventListener('click', clicar)
+        
+        function clicar() {
+            secondSection.style.display = 'none';
+        if(secondSection == 'none') {
+            secondSection.style.display = 'show';
+        }
+        }
+
+        
+        function reset() {
+        document.getElementById("secondbuttons").style.display = "show";
+        }
+
+        /* let open = window.document.getElementById('secondbuttons');
+        let close = window.document.getElementById('');
+        let menu = document.querySelector('');
+
+        open.addEventListener('click', function() {
+        menu.style.display = 'block';
+        });
+
+        close.addEventListener('click', function() {
+        menu.style.display = 'none';
+        }); */
+
+        
+    </script>
+
+
+</body>
+</html>
